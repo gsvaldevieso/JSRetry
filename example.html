@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="src/jsretry.js"></script>
+<script type="text/javascript">
+	JSRetry.try({
+		attempts: 10,
+		interval: 500,
+		checker: function() {
+			//Here that you want to check before execute success
+			console.log('checking if some object exists');
+			return window.AnyObjectYouWantToUse === "loaded";
+		},
+		success: function() {
+			//Here you can execute anything after the checker function pass
+			console.log('works');
+		},
+		timeout: function() {
+			//This function will be called when checker func never pass
+			console.log('the counter timeouted!');
+		},
+		error: function(error) {
+			//OMG! Some error was catched and we call it for you
+			console.log(error);
+		}
+	});
+</script>
+</body>
+</html>

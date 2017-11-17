@@ -1,0 +1,27 @@
+{
+  "name": "JSRetry",
+  "description": "A pure javascript component for retry operations",
+  "main": "jsretry.js",
+  "keywords": [
+    "retry",
+    "scripts",
+    "analytics",
+    "third",
+    "part",
+    "error",
+    "handling"
+  ],
+  "authors": [
+    "Guilherme Valdevieso"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
